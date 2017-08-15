@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Reload.cs" />
-     <Compile Include="Assets\Scripts\bulletmove.cs" />
-     <Compile Include="Assets\Scripts\destroybyleaving.cs" />
-     <Compile Include="Assets\Scripts\destroybytouching.cs" />
-     <Compile Include="Assets\Scripts\moveplayer.cs" />
-     <Compile Include="Assets\Scripts\rotation.cs" />
-     <Compile Include="Assets\Scripts\shoot.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\ModBehavior.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\Mods.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\rotation.cs" />
+     <Compile Include="Assets\Scripts\Player\destroybytouching.cs" />
+     <Compile Include="Assets\Scripts\Player\moveplayer.cs" />
+     <Compile Include="Assets\Scripts\Player\shoot.cs" />
+     <Compile Include="Assets\Scripts\bullet behavior\bulletmove.cs" />
+     <Compile Include="Assets\Scripts\bullet behavior\destroybyleaving.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
