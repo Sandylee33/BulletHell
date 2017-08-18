@@ -16,13 +16,15 @@ public class BossBehavior : MonoBehaviour {
 
 		for (int i = 0; i < modes; i++) 
 		{
-			boss_mods.Add (new Modes (i,"",Vector3.zero,null));
+			boss_mods.Add (new Modes (i,"",null,null));
 		}
-		boss_mods [0].mode_rot = Vector3.forward;
-		boss_mods [1].mode_rot = Vector3.back;
+		boss_mods [0].mode_rot = new rotation(Vector3.forward);
+		boss_mods [1].mode_rot = new rotation(Vector3.back);
 		BossModes.Init ();
 		previousMode = BossModes.bossmode.mode_id;
 		StartCoroutine (SwitchBossModeByTime (5));
+		StartCoroutine (Acceleration (10));
+
 	}
 	
 	// Update is called once per frame
@@ -73,6 +75,12 @@ public class BossBehavior : MonoBehaviour {
 		{ 
 			SwitchToNextMode ();
 		}
+	}
+
+	IEnumerator Acceleration(int sec)
+	{
+		yield return new WaitForSecondsRealtime (sec);
+		BossModes.bossmode.mode_rot.Accelerate ();
 	}
 
 }

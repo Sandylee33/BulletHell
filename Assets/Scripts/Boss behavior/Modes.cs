@@ -6,13 +6,13 @@ public class Modes {
 
 	public int mode_id;
 	public string mode_desc;
-	public Vector3 mode_rot;
+	public rotation mode_rot;
 	public bulletmove mode_bullet_move;
 
 	public bool end = false;
 	public float hitPoints;
 
-	public Modes(int id, string desc, Vector3 rot, bulletmove bullet_move)
+	public Modes(int id, string desc, rotation rot, bulletmove bullet_move)
 	{
 		mode_id = id;
 		mode_desc = desc;
@@ -37,11 +37,11 @@ public class Modes {
 
 public static class BossModes
 {
-	public static Modes bossmode = new Modes(0,"",Vector3.forward,null);
+	public static Modes bossmode = new Modes(0,"",null,null);
 
 	public static void Init()
 	{
-		bossmode = new Modes (0,"",Vector3.zero,null);
+		bossmode = new Modes (0,"",null,null);
 
 	}
 
