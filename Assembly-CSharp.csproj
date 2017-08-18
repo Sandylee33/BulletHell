@@ -47,8 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Reload.cs" />
-     <Compile Include="Assets\Scripts\Boss behavior\ModBehavior.cs" />
-     <Compile Include="Assets\Scripts\Boss behavior\Mods.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\BossBehavior.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\Modes.cs" />
+     <Compile Include="Assets\Scripts\Boss behavior\RotationBehavior.cs" />
      <Compile Include="Assets\Scripts\Boss behavior\rotation.cs" />
      <Compile Include="Assets\Scripts\Player\destroybytouching.cs" />
      <Compile Include="Assets\Scripts\Player\moveplayer.cs" />

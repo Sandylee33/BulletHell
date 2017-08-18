@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotation : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+public class rotation  {
 	
-	// Update is called once per frame
-	void Update () {
-		transform.Rotate (Vector3.forward);
+	public Vector3 rot;
+
+	public rotation(Vector3 rotation)
+	{
+		rot = rotation;
 	}
+
 }
