@@ -7,6 +7,7 @@ public class Modes {
 	public int mode_id;
 	public string mode_desc;
 	public rotation mode_rot;
+	public movement mode_mov;
 	public bulletmove mode_bullet_move;
 
 	public bool end = false;
@@ -18,6 +19,7 @@ public class Modes {
 		mode_desc = desc;
 		mode_rot = rot;
 		mode_bullet_move = bullet_move;
+		mode_mov = null;
 		hitPoints = 50;
 		end = false;
 	}

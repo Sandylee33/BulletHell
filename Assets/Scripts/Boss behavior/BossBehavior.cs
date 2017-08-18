@@ -9,17 +9,19 @@ public class BossBehavior : MonoBehaviour {
 	public int modes = 2;
 	public int previousMode;
 
-
+	//public Transform E;
 
 	// Use this for initialization
 	void Start () {
-
+	//	E = GetComponentInParent<Transform> ();
 		for (int i = 0; i < modes; i++) 
 		{
 			boss_mods.Add (new Modes (i,"",null,null));
 		}
 		boss_mods [0].mode_rot = new rotation(Vector3.forward);
+		boss_mods [0].mode_mov = new movement(Vector3.right);
 		boss_mods [1].mode_rot = new rotation(Vector3.back);
+		boss_mods [1].mode_mov = new movement(Vector3.down);
 		BossModes.Init ();
 		previousMode = BossModes.bossmode.mode_id;
 		StartCoroutine (SwitchBossModeByTime (5));
