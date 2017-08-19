@@ -11,6 +11,8 @@ public class MoveBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (BossModes.bossmode.mode_mov.GetMovement ()*Time.deltaTime, Space.World);
+		if (BossModes.bossmode.mode_mov != null) {
+			transform.Translate (BossModes.bossmode.mode_mov.GetMovement () * Time.deltaTime, Space.World);
+		}
 	}
 }

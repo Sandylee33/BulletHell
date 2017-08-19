@@ -9,9 +9,11 @@ public class bulletmove : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		BossModes.bossmode.mode_bullet.direction = transform.up;
 		rb2d = GetComponent<Rigidbody2D> ();
-		rb2d.velocity = transform.up * speed * -1;
-		}
+		rb2d.velocity = BossModes.bossmode.mode_bullet.GetVelocity() * -1;
+
+	}
 	
 	// Update is called once per frame
 	void Update () {

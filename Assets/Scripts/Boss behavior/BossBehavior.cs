@@ -5,7 +5,6 @@ using UnityEngine;
 public class BossBehavior : MonoBehaviour {
 
 	public List<Modes> boss_mods = new List<Modes>();
-
 	public int modes = 2;
 	public int previousMode;
 
@@ -14,15 +13,18 @@ public class BossBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	//	E = GetComponentInParent<Transform> ();
+		BossModes.Init ();
 		for (int i = 0; i < modes; i++) 
 		{
-			boss_mods.Add (new Modes (i,"",null,null));
+			boss_mods.Add (new Modes (i));
 		}
 		boss_mods [0].mode_rot = new rotation(Vector3.forward);
 		boss_mods [0].mode_mov = new movement(Vector3.right);
+		boss_mods [1].mode_bullet = new Bullet (10, null);
 		boss_mods [1].mode_rot = new rotation(Vector3.back);
 		boss_mods [1].mode_mov = new movement(Vector3.down);
-		BossModes.Init ();
+
+		Debug.Log (BossModes.bossmode.mode_id);
 		previousMode = BossModes.bossmode.mode_id;
 		StartCoroutine (SwitchBossModeByTime (5));
 		StartCoroutine (Acceleration (10));
@@ -31,16 +33,16 @@ public class BossBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ((int)Time.time);
+//		Debug.Log ((int)Time.time);
 		if (Input.GetKeyDown (KeyCode.A)) {
 			
 			BossModes.bossmode.Switch (boss_mods[0]);
-			Debug.Log (BossModes.bossmode.mode_id);
+			//Debug.Log (BossModes.bossmode.mode_id);
 
 		} else if (Input.GetKeyDown (KeyCode.S)) 
 		{
 			BossModes.bossmode.Switch (boss_mods[1]);
-			Debug.Log (BossModes.bossmode.mode_id);
+		//	Debug.Log (BossModes.bossmode.mode_id);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
