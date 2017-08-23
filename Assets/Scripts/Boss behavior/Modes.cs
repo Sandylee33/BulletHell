@@ -20,7 +20,7 @@ public class Modes {
 		mode_rot = new rotation (Vector3.zero);
 		mode_mov = new movement (Vector3.zero);
 
-		mode_bullet = Bullets.bullets [id];
+		mode_bullet = null;
 
 		hitPoints = 50;
 		end = false;

@@ -13,26 +13,19 @@ public class BossBehavior : MonoBehaviour {
 
 	void Awake(){
 
-
+		Bullets.Init (2);
+		BossModes.Init (2);
 
 	}
 
 	// Use this for initialization
 	void Start () {
-	//	E = GetComponentInParent<Transform> ();
-
-		Bullets.Init (2);
-		Bullets.bullets [0].bullet_id = 0;
-		Bullets.bullets [1].bullet_id = 1;
-
-		BossModes.Init (2);
-
 
 		BossModes.bossmodes[0].mode_rot = new rotation(Vector3.forward);
 		BossModes.bossmodes[0].mode_mov = new movement(Vector3.zero);
 
-		BossModes.bossmodes[1].mode_rot = new rotation(Vector3.forward);
-		BossModes.bossmodes[1].mode_mov = new movement(Vector3.down);
+		BossModes.bossmodes[1].mode_rot = new rotation(Vector3.back);
+		BossModes.bossmodes[1].mode_mov = new movement(Vector3.zero);
 
 
 		for (int i = 0; i < modes; i++) 
@@ -43,8 +36,10 @@ public class BossBehavior : MonoBehaviour {
 
 		Debug.Log (BossModes.current_bossmode.mode_id);
 		//previousMode = BossModes.bossmode.mode_id;
-		StartCoroutine (SwitchBossModeByTime (5));
-		StartCoroutine (Acceleration (10));
+
+			StartCoroutine (SwitchBossModeByTime (3));
+			StartCoroutine (Acceleration (6));
+
 
 	}
 	
@@ -84,7 +79,7 @@ public class BossBehavior : MonoBehaviour {
 		} 
 		else 
 		{
-			BossModes.current_bossmode.end = true;
+			BossModes.current_bossmode.Switch (BossModes.bossmodes [0]);
 		}
 	}
 
@@ -92,9 +87,11 @@ public class BossBehavior : MonoBehaviour {
 	{
 		
 		yield return new WaitForSecondsRealtime (sec);
-		if (BossModes.current_bossmode.hitPoints > 0) 
-		{ 
-			SwitchToNextMode ();
+		while (true) {
+			if (BossModes.current_bossmode.hitPoints > 0) { 
+				SwitchToNextMode ();
+				yield return new WaitForSecondsRealtime (sec);
+			}
 		}
 	}
 
