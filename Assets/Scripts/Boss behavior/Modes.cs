@@ -19,14 +19,16 @@ public class Modes {
 		mode_desc = "";
 		mode_rot = new rotation (Vector3.zero);
 		mode_mov = new movement (Vector3.zero);
-		mode_bullet = new Bullet (7, null);
+
+		mode_bullet = Bullets.bullets [id];
+
 		hitPoints = 50;
 		end = false;
 	}
 
 	public void Switch(Modes mod)
 	{
-		BossModes.bossmode = mod;
+		BossModes.current_bossmode = mod;
 	}
 
 //	Modes mod = new Modes ();
@@ -39,12 +41,18 @@ public class Modes {
 
 public static class BossModes
 {
-	public static Modes bossmode = new Modes(0);
+	public static List<Modes> bossmodes = new List<Modes> ();
 
-	public static void Init()
+	public static Modes current_bossmode;
+
+	public static void Init(int modes)
 	{
-	  	bossmode = new Modes (0);
+		for (int i = 0; i < modes; i++) 
+		{
+			bossmodes.Add (new Modes (i));
+		}
 
+		current_bossmode = bossmodes [0];
 	}
 
 

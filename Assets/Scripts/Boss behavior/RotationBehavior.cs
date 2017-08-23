@@ -12,8 +12,8 @@ public class RotationBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (BossModes.bossmode.mode_rot != null) {
-			transform.Rotate (BossModes.bossmode.mode_rot.GetRotation ());
+		if (BossModes.current_bossmode.mode_rot != null) {
+			transform.Rotate (BossModes.current_bossmode.mode_rot.GetRotation ());
 		}
 	}
 }

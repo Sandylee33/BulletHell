@@ -14,13 +14,13 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 1
-    y: 43
+    y: 44
     width: 1440
     height: 852
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 802
-  m_MinSize: {x: 681, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 112
+  controlID: 70
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -90,8 +90,8 @@ MonoBehaviour:
     y: 0
     width: 279
     height: 485
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -207,8 +207,8 @@ MonoBehaviour:
     y: 0
     width: 1128
     height: 802
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
   controlID: 71
 --- !u!114 &10
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 0
     width: 1128
     height: 485
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
   controlID: 50
 --- !u!114 &11
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1
     y: 578
     width: 1126
     height: 296
@@ -429,19 +429,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Boss behavior
+    - Assets/Scripts/bullet behavior
   m_ViewMode: 1
   m_StartGridSize: 70
   m_LastFolders:
-  - Assets/Scripts/Boss behavior
+  - Assets/Scripts/bullet behavior
   m_LastFoldersGridSize: 70
   m_LastProjectPath: /Users/haoyu_li/BulletHell
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 56250000
-    m_LastClickedID: 9558
-    m_ExpandedIDs: 00000000b02400002c25000000ca9a3bffffff7f
+    m_SelectedIDs: 02250000
+    m_LastClickedID: 9474
+    m_ExpandedIDs: 00000000c82400004425000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,7 +469,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b02400002c250000
+    m_ExpandedIDs: 00000000c824000044250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -494,9 +494,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b8fbffff
-    m_LastClickedInstanceID: -1096
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: c4fbffff
+    m_LastClickedInstanceID: -1084
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 0452ffffd621000000000000d02100009e2600003424000038240000badbffff98d5ffff3a240000b6240000aa240000a0240000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1131
-    y: 92
+    y: 93
     width: 310
     height: 781
   m_ScrollPosition: {x: 0, y: 0}
@@ -580,25 +580,25 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1
-    y: 92
+    y: 93
     width: 277
     height: 464
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: acfbffffdcfbffff0000000086250000
+    m_ExpandedIDs: dcfbffff000000008e250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: E
-      m_OriginalName: E
+      m_Name: Directional Light
+      m_OriginalName: Directional Light
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9606
+      m_UserData: 9694
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 282
-    y: 92
+    y: 93
     width: 845
     height: 464
   m_SceneLighting: 1
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 282
-    y: 92
+    y: 93
     width: 845
     height: 464
   m_MaximizeOnPlay: 0
@@ -783,6 +783,6 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1
-    y: 577
+    y: 578
     width: 1126
     height: 296

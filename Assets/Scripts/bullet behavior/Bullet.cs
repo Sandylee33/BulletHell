@@ -14,6 +14,7 @@ public class Bullet  {
 	{
 		speed = spd;
 		bullet_sprite = pic;
+		direction = Vector3.zero;
 
 	}
 
@@ -23,4 +24,30 @@ public class Bullet  {
 	}
 
 
+
+
+	public int GetId()
+	{
+		return bullet_id;
+	}
+
+
+}
+
+
+public static class Bullets
+{
+	//public static Bullet bullet = new Bullet (7, null);
+	public static List<Bullet> bullets = new List<Bullet> ();
+
+	public static Bullet current_bullet;
+
+	public static void Init(int kind)
+	{
+		for (int i = 0; i < kind; i++) {
+			bullets.Add (new Bullet (7, null));
+		}
+
+		current_bullet = bullets [0];
+	}
 }
