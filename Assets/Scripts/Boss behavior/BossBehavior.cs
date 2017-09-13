@@ -37,8 +37,8 @@ public class BossBehavior : MonoBehaviour {
 		Debug.Log (BossModes.current_bossmode.mode_id);
 		//previousMode = BossModes.bossmode.mode_id;
 
-			StartCoroutine (SwitchBossModeByTime (3));
-			StartCoroutine (Acceleration (6));
+			StartCoroutine (SwitchBossModeByTime (6));
+			//StartCoroutine (Acceleration (3));
 
 
 	}

@@ -26,9 +26,16 @@ public class Bullet  {
 
 
 
-	public int GetId()
+	public static Bullet GetById(int id)
 	{
-		return bullet_id;
+		foreach (Bullet bullet in Bullets.bullets) 
+		{
+			if (bullet.bullet_id == id) {
+				return bullet;
+			}
+		}
+		return null;
+
 	}
 
 
