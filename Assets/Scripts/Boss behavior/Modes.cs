@@ -43,6 +43,8 @@ public static class BossModes
 {
 	public static List<Modes> bossmodes = new List<Modes> ();
 
+
+
 	public static Modes current_bossmode;
 
 	public static void Init(int modes)

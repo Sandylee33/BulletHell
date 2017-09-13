@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Player\moveplayer.cs" />
      <Compile Include="Assets\Scripts\Player\shoot.cs" />
      <Compile Include="Assets\Scripts\bullet behavior\Bullet.cs" />
+     <Compile Include="Assets\Scripts\bullet behavior\BulletBehaviorTemplate.cs" />
      <Compile Include="Assets\Scripts\bullet behavior\bulletmove.cs" />
      <Compile Include="Assets\Scripts\bullet behavior\destroybyleaving.cs" />
  <Reference Include="UnityEngine.UI">

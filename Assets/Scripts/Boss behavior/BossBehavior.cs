@@ -8,18 +8,25 @@ public class BossBehavior : MonoBehaviour {
 	//public List<Modes> boss_mods = new List<Modes>();
 	public int modes = 2;
 	public int previousMode;
-
+	public BulletBehaviorTemplate[] bulletBehaviorTemplates;
 	//public Transform E;
 
 	void Awake(){
-
-		Bullets.Init (2);
+		bulletBehaviorTemplates = GetComponents<BulletBehaviorTemplate> ();
+		foreach (BulletBehaviorTemplate bulletBehavior in bulletBehaviorTemplates) 
+		{
+			Bullets.Init (bulletBehaviorTemplates.Length, bulletBehavior);
+		}
+		
 		BossModes.Init (2);
 
 	}
 
 	// Use this for initialization
 	void Start () {
+		
+
+
 
 		BossModes.bossmodes[0].mode_rot = new rotation(Vector3.forward);
 		BossModes.bossmodes[0].mode_mov = new movement(Vector3.zero);

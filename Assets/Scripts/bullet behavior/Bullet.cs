@@ -10,11 +10,12 @@ public class Bullet  {
 	public int speed;
 	public Vector3 direction;
 
-	public Bullet()
+	public Bullet(BulletBehaviorTemplate template)
 	{
-		speed = 7;
-		bullet_sprite = null;
-		direction = Vector3.zero;
+		bullet_id = template.id;
+		speed = template.speed;
+		bullet_sprite = template.sprite;
+		direction = template.direction;
 
 	}
 
@@ -49,10 +50,10 @@ public static class Bullets
 
 	public static Bullet current_bullet;
 
-	public static void Init(int kind)
+	public static void Init(int kind, BulletBehaviorTemplate template)
 	{
 		for (int i = 0; i < kind; i++) {
-			bullets.Add (new Bullet ());
+			bullets.Add (new Bullet (template));
 		}
 
 		current_bullet = bullets [0];
